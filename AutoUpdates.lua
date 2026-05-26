@@ -366,36 +366,57 @@ G2L["25"] = Instance.new("UICorner", G2L["24"]);
 
 
 
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.Settings.CheckVersion
+G2L["26"] = Instance.new("TextButton", G2L["20"]);
+G2L["26"]["TextWrapped"] = true;
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["TextSize"] = 14;
+G2L["26"]["TextScaled"] = true;
+G2L["26"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["26"]["BackgroundTransparency"] = 0.5;
+G2L["26"]["Size"] = UDim2.new(0, 165, 0, 50);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Text"] = [[Check  Version]];
+G2L["26"]["Name"] = [[CheckVersion]];
+
+
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.Settings.CheckVersion.UICorner
+G2L["27"] = Instance.new("UICorner", G2L["26"]);
+
+
+
 -- StarterGui.UltimateHackingGUI.MainFrame.Space
-G2L["26"] = Instance.new("UIGradient", G2L["4"]);
-G2L["26"]["Enabled"] = false;
-G2L["26"]["Rotation"] = 45;
-G2L["26"]["Name"] = [[Space]];
-G2L["26"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(76, 0, 67)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+G2L["28"] = Instance.new("UIGradient", G2L["4"]);
+G2L["28"]["Enabled"] = false;
+G2L["28"]["Rotation"] = 45;
+G2L["28"]["Name"] = [[Space]];
+G2L["28"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(76, 0, 67)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
 
 
 -- StarterGui.UltimateHackingGUI.MainFrame.BubbleGum
-G2L["27"] = Instance.new("UIGradient", G2L["4"]);
-G2L["27"]["Enabled"] = false;
-G2L["27"]["Rotation"] = 45;
-G2L["27"]["Name"] = [[BubbleGum]];
-G2L["27"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(254, 0, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 147, 243))};
+G2L["29"] = Instance.new("UIGradient", G2L["4"]);
+G2L["29"]["Enabled"] = false;
+G2L["29"]["Rotation"] = 45;
+G2L["29"]["Name"] = [[BubbleGum]];
+G2L["29"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(254, 0, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 147, 243))};
 
 
 -- StarterGui.UltimateHackingGUI.Open
-G2L["28"] = Instance.new("TextButton", G2L["1"]);
-G2L["28"]["TextWrapped"] = true;
-G2L["28"]["BorderSizePixel"] = 0;
-G2L["28"]["TextSize"] = 14;
-G2L["28"]["TextScaled"] = true;
-G2L["28"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["28"]["Size"] = UDim2.new(0, 50, 0, 50);
-G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["28"]["Text"] = [[UHG]];
-G2L["28"]["Name"] = [[Open]];
-G2L["28"]["Position"] = UDim2.new(0, 0, 0.92877, 0);
+G2L["2a"] = Instance.new("TextButton", G2L["1"]);
+G2L["2a"]["TextWrapped"] = true;
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextSize"] = 14;
+G2L["2a"]["TextScaled"] = true;
+G2L["2a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2a"]["Size"] = UDim2.new(0, 50, 0, 50);
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Text"] = [[UHG]];
+G2L["2a"]["Name"] = [[Open]];
+G2L["2a"]["Position"] = UDim2.new(0, 0, 0.92877, 0);
 
 
 -- StarterGui.UltimateHackingGUI.Setup/SettingConfig
@@ -406,9 +427,12 @@ local script = G2L["2"];
 	LightingFolder.Name = "LightingStorage"
 	local SettingsFolder = Instance.new("Folder")
 	SettingsFolder.Name = "GUISettingsStorage"
+	local DataFolder = Instance.new("Folder")
+	DataFolder.Name = "GUIDataStorage"
 	
 	LightingFolder.Parent = game.ReplicatedStorage
 	SettingsFolder.Parent = game.ReplicatedStorage
+	DataFolder.Parent = game.ReplicatedStorage
 	
 	-- Settings
 	local CloakSetting = Instance.new("BoolValue", SettingsFolder)
@@ -418,6 +442,10 @@ local script = G2L["2"];
 	local ThemeSetting = Instance.new("StringValue", SettingsFolder)
 	ThemeSetting.Name = "ThemeSetting"
 	ThemeSetting.Value = "DragonFruit"
+	
+	local CurrentVersion = Instance.new("NumberValue", DataFolder)
+	CurrentVersion.Name = "CurrentVersion"
+	CurrentVersion.Value = 0.4
 	
 	CloakSetting.Changed:Connect(function()
 		if CloakSetting.Value == true then
@@ -550,10 +578,10 @@ local script = G2L["3"];
 	end)
 	
 	MainFrame.Sections.Settings.Cloak.MouseButton1Click:Connect(function()
-		if game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("CloakSetting").Value == true then
-			game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("CloakSetting").Value = false
-		else
+		if game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("CloakSetting").Value == false then
 			game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("CloakSetting").Value = true
+		else
+			game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("CloakSetting").Value = false
 		end
 	end)
 	
@@ -565,6 +593,19 @@ local script = G2L["3"];
 		elseif game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("ThemeSetting").Value == "BubbleGum" then
 			game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("ThemeSetting").Value = "DragonFruit"
 		end
+	end)
+	
+	MainFrame.Sections.Settings.CheckVersion.MouseButton1Click:Connect(function()
+		local GetVersion = loadstring(game:HttpGet("https://raw.githubusercontent.com/hackersofrobloxia/UltimateHackingGUI/refs/heads/main/CheckVersion"))()
+		
+		if GetVersion == game.ReplicatedStorage:FindFirstChild("GUIDataStorage"):FindFirstChild("CurrentVersion") then
+			MainFrame.Sections.Settings.CheckVersion.Text = "Up to date"
+		else
+			MainFrame.Sections.Settings.CheckVersion.Text = "Outdated"
+		end
+		
+		wait(2)
+		MainFrame.Sections.Settings.CheckVersion.Text = "Check Version"
 	end)
 	
 	OpenUIAnim()

@@ -215,7 +215,6 @@ G2L["17"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.WalkSpeed
 G2L["18"] = Instance.new("TextBox", G2L["17"]);
-G2L["18"]["CursorPosition"] = -1;
 G2L["18"]["Name"] = [[WalkSpeed]];
 G2L["18"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["18"]["BorderSizePixel"] = 0;
@@ -240,7 +239,6 @@ G2L["19"] = Instance.new("UICorner", G2L["18"]);
 
 -- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.JumpHeight
 G2L["1a"] = Instance.new("TextBox", G2L["17"]);
-G2L["1a"]["CursorPosition"] = -1;
 G2L["1a"]["Name"] = [[JumpHeight]];
 G2L["1a"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1a"]["BorderSizePixel"] = 0;
@@ -443,6 +441,10 @@ local script = G2L["3"];
 	
 	MainFrame.Sections.QuickButtons.IY.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+	end)
+	
+	MainFrame.Sections.CharManipulator.ExecuteChanges.MouseButton1Click:Connect(function()
+		ManipulateCharacter()
 	end)
 	
 	OpenUIAnim()

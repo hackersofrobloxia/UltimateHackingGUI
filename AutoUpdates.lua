@@ -188,7 +188,6 @@ G2L["14"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.UltimateHackingGUI.MainFrame.Sections.QuickButtons
 G2L["15"] = Instance.new("ScrollingFrame", G2L["14"]);
-G2L["15"]["Visible"] = false;
 G2L["15"]["Active"] = true;
 G2L["15"]["BorderSizePixel"] = 0;
 G2L["15"]["Name"] = [[QuickButtons]];
@@ -308,6 +307,7 @@ G2L["1f"] = Instance.new("UICorner", G2L["1e"]);
 
 -- StarterGui.UltimateHackingGUI.MainFrame.Sections.Settings
 G2L["20"] = Instance.new("ScrollingFrame", G2L["14"]);
+G2L["20"]["Visible"] = false;
 G2L["20"]["Active"] = true;
 G2L["20"]["BorderSizePixel"] = 0;
 G2L["20"]["Name"] = [[Settings]];
@@ -598,7 +598,7 @@ local script = G2L["3"];
 	MainFrame.Sections.Settings.CheckVersion.MouseButton1Click:Connect(function()
 		local GetVersion = loadstring(game:HttpGet("https://raw.githubusercontent.com/hackersofrobloxia/UltimateHackingGUI/refs/heads/main/CheckVersion"))()
 		
-		if GetVersion <= game.ReplicatedStorage:FindFirstChild("GUIDataStorage"):FindFirstChild("CurrentVersion") then
+		if GetVersion == game.ReplicatedStorage:FindFirstChild("GUIDataStorage"):FindFirstChild("CurrentVersion").Value then
 			MainFrame.Sections.Settings.CheckVersion.Text = "Up to date"
 		else
 			MainFrame.Sections.Settings.CheckVersion.Text = "Outdated"

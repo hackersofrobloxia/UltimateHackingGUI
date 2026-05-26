@@ -598,7 +598,7 @@ local script = G2L["3"];
 	MainFrame.Sections.Settings.CheckVersion.MouseButton1Click:Connect(function()
 		local GetVersion = loadstring(game:HttpGet("https://raw.githubusercontent.com/hackersofrobloxia/UltimateHackingGUI/refs/heads/main/CheckVersion"))()
 		
-		if GetVersion == game.ReplicatedStorage:FindFirstChild("GUIDataStorage"):FindFirstChild("CurrentVersion") then
+		if GetVersion <= game.ReplicatedStorage:FindFirstChild("GUIDataStorage"):FindFirstChild("CurrentVersion") then
 			MainFrame.Sections.Settings.CheckVersion.Text = "Up to date"
 		else
 			MainFrame.Sections.Settings.CheckVersion.Text = "Outdated"

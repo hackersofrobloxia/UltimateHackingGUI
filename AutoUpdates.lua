@@ -4,6 +4,7 @@ local G2L = {};
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[UltimateHackingGUI]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
 
 
 -- StarterGui.UltimateHackingGUI.Setup/SettingConfig
@@ -153,93 +154,91 @@ G2L["11"] = Instance.new("UICorner", G2L["10"]);
 G2L["11"]["CornerRadius"] = UDim.new(0, 16);
 
 
--- StarterGui.UltimateHackingGUI.MainFrame.Sections
-G2L["12"] = Instance.new("Frame", G2L["4"]);
+-- StarterGui.UltimateHackingGUI.MainFrame.SectionButtons.Settings
+G2L["12"] = Instance.new("TextButton", G2L["b"]);
+G2L["12"]["TextWrapped"] = true;
 G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 14;
+G2L["12"]["TextScaled"] = true;
+G2L["12"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["12"]["Size"] = UDim2.new(0.846, 0, 0.69, 0);
-G2L["12"]["Position"] = UDim2.new(0.062, 0, 0.228, 0);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["Size"] = UDim2.new(0, 123, 0, 22);
 G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["Name"] = [[Sections]];
-G2L["12"]["BackgroundTransparency"] = 1;
+G2L["12"]["Text"] = [[Settings]];
+G2L["12"]["Name"] = [[Settings]];
+G2L["12"]["Position"] = UDim2.new(0.049, 0, 0.18571, 0);
+
+
+-- StarterGui.UltimateHackingGUI.MainFrame.SectionButtons.Settings.UICorner
+G2L["13"] = Instance.new("UICorner", G2L["12"]);
+G2L["13"]["CornerRadius"] = UDim.new(0, 16);
+
+
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections
+G2L["14"] = Instance.new("Frame", G2L["4"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["14"]["Size"] = UDim2.new(0.846, 0, 0.69, 0);
+G2L["14"]["Position"] = UDim2.new(0.062, 0, 0.228, 0);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Name"] = [[Sections]];
+G2L["14"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.UltimateHackingGUI.MainFrame.Sections.QuickButtons
-G2L["13"] = Instance.new("ScrollingFrame", G2L["12"]);
-G2L["13"]["Active"] = true;
-G2L["13"]["BorderSizePixel"] = 0;
-G2L["13"]["Name"] = [[QuickButtons]];
-G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["13"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["13"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["13"]["BackgroundTransparency"] = 1;
+G2L["15"] = Instance.new("ScrollingFrame", G2L["14"]);
+G2L["15"]["Visible"] = false;
+G2L["15"]["Active"] = true;
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["Name"] = [[QuickButtons]];
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["15"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.UltimateHackingGUI.MainFrame.Sections.QuickButtons.IY
-G2L["14"] = Instance.new("TextButton", G2L["13"]);
-G2L["14"]["TextWrapped"] = true;
-G2L["14"]["BorderSizePixel"] = 0;
-G2L["14"]["TextSize"] = 14;
-G2L["14"]["TextScaled"] = true;
-G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["14"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["14"]["BackgroundTransparency"] = 0.5;
-G2L["14"]["Size"] = UDim2.new(0, 165, 0, 50);
-G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["Text"] = [[Infinite Yield]];
-G2L["14"]["Name"] = [[IY]];
+G2L["16"] = Instance.new("TextButton", G2L["15"]);
+G2L["16"]["TextWrapped"] = true;
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["TextSize"] = 14;
+G2L["16"]["TextScaled"] = true;
+G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["16"]["BackgroundTransparency"] = 0.5;
+G2L["16"]["Size"] = UDim2.new(0, 165, 0, 50);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Text"] = [[Infinite Yield]];
+G2L["16"]["Name"] = [[IY]];
 
 
 -- StarterGui.UltimateHackingGUI.MainFrame.Sections.QuickButtons.IY.UICorner
-G2L["15"] = Instance.new("UICorner", G2L["14"]);
+G2L["17"] = Instance.new("UICorner", G2L["16"]);
 
 
 
 -- StarterGui.UltimateHackingGUI.MainFrame.Sections.QuickButtons.UIGridLayout
-G2L["16"] = Instance.new("UIGridLayout", G2L["13"]);
-G2L["16"]["CellSize"] = UDim2.new(0, 165, 0, 50);
+G2L["18"] = Instance.new("UIGridLayout", G2L["15"]);
+G2L["18"]["CellSize"] = UDim2.new(0, 165, 0, 50);
 
 
 -- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator
-G2L["17"] = Instance.new("Frame", G2L["12"]);
-G2L["17"]["Visible"] = false;
-G2L["17"]["BorderSizePixel"] = 0;
-G2L["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["17"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["17"]["Name"] = [[CharManipulator]];
-G2L["17"]["BackgroundTransparency"] = 1;
+G2L["19"] = Instance.new("Frame", G2L["14"]);
+G2L["19"]["Visible"] = false;
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["19"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Name"] = [[CharManipulator]];
+G2L["19"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.WalkSpeed
-G2L["18"] = Instance.new("TextBox", G2L["17"]);
-G2L["18"]["Name"] = [[WalkSpeed]];
-G2L["18"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["18"]["BorderSizePixel"] = 0;
-G2L["18"]["TextWrapped"] = true;
-G2L["18"]["TextSize"] = 14;
-G2L["18"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["TextScaled"] = true;
-G2L["18"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["18"]["PlaceholderText"] = [[WALKSPEED AMOUNT]];
-G2L["18"]["Size"] = UDim2.new(0.43026, 0, 0.14493, 0);
-G2L["18"]["Position"] = UDim2.new(0.03442, 0, 0.03768, 0);
-G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["Text"] = [[]];
-G2L["18"]["BackgroundTransparency"] = 0.5;
-
-
--- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.WalkSpeed.UICorner
-G2L["19"] = Instance.new("UICorner", G2L["18"]);
-
-
-
--- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.JumpHeight
-G2L["1a"] = Instance.new("TextBox", G2L["17"]);
-G2L["1a"]["Name"] = [[JumpHeight]];
+G2L["1a"] = Instance.new("TextBox", G2L["19"]);
+G2L["1a"]["Name"] = [[WalkSpeed]];
 G2L["1a"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1a"]["BorderSizePixel"] = 0;
 G2L["1a"]["TextWrapped"] = true;
@@ -248,55 +247,155 @@ G2L["1a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a"]["TextScaled"] = true;
 G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["1a"]["PlaceholderText"] = [[JUMPHEIGHT AMOUNT]];
+G2L["1a"]["PlaceholderText"] = [[WALKSPEED AMOUNT]];
 G2L["1a"]["Size"] = UDim2.new(0.43026, 0, 0.14493, 0);
-G2L["1a"]["Position"] = UDim2.new(0.54213, 0, 0.03768, 0);
+G2L["1a"]["Position"] = UDim2.new(0.03442, 0, 0.03768, 0);
 G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1a"]["Text"] = [[]];
 G2L["1a"]["BackgroundTransparency"] = 0.5;
 
 
--- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.JumpHeight.UICorner
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.WalkSpeed.UICorner
 G2L["1b"] = Instance.new("UICorner", G2L["1a"]);
 
 
 
--- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.ExecuteChanges
-G2L["1c"] = Instance.new("TextButton", G2L["17"]);
-G2L["1c"]["TextWrapped"] = true;
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.JumpHeight
+G2L["1c"] = Instance.new("TextBox", G2L["19"]);
+G2L["1c"]["Name"] = [[JumpHeight]];
+G2L["1c"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextWrapped"] = true;
 G2L["1c"]["TextSize"] = 14;
+G2L["1c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1c"]["TextScaled"] = true;
-G2L["1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["1c"]["BackgroundTransparency"] = 0.5;
+G2L["1c"]["PlaceholderText"] = [[JUMPHEIGHT AMOUNT]];
 G2L["1c"]["Size"] = UDim2.new(0.43026, 0, 0.14493, 0);
+G2L["1c"]["Position"] = UDim2.new(0.54213, 0, 0.03768, 0);
 G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1c"]["Text"] = [[Execute Changes]];
-G2L["1c"]["Name"] = [[ExecuteChanges]];
-G2L["1c"]["Position"] = UDim2.new(0.30118, 0, 0.77391, 0);
+G2L["1c"]["Text"] = [[]];
+G2L["1c"]["BackgroundTransparency"] = 0.5;
 
 
--- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.ExecuteChanges.UICorner
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.JumpHeight.UICorner
 G2L["1d"] = Instance.new("UICorner", G2L["1c"]);
 
 
 
--- StarterGui.UltimateHackingGUI.Open
-G2L["1e"] = Instance.new("TextButton", G2L["1"]);
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.ExecuteChanges
+G2L["1e"] = Instance.new("TextButton", G2L["19"]);
 G2L["1e"]["TextWrapped"] = true;
 G2L["1e"]["BorderSizePixel"] = 0;
 G2L["1e"]["TextSize"] = 14;
 G2L["1e"]["TextScaled"] = true;
-G2L["1e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["1e"]["Size"] = UDim2.new(0, 50, 0, 50);
+G2L["1e"]["BackgroundTransparency"] = 0.5;
+G2L["1e"]["Size"] = UDim2.new(0.43026, 0, 0.14493, 0);
 G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1e"]["Text"] = [[UHG]];
-G2L["1e"]["Name"] = [[Open]];
-G2L["1e"]["Position"] = UDim2.new(0, 0, 0.92877, 0);
+G2L["1e"]["Text"] = [[Execute Changes]];
+G2L["1e"]["Name"] = [[ExecuteChanges]];
+G2L["1e"]["Position"] = UDim2.new(0.30118, 0, 0.77391, 0);
+
+
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.CharManipulator.ExecuteChanges.UICorner
+G2L["1f"] = Instance.new("UICorner", G2L["1e"]);
+
+
+
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.Settings
+G2L["20"] = Instance.new("ScrollingFrame", G2L["14"]);
+G2L["20"]["Active"] = true;
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["Name"] = [[Settings]];
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["20"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.Settings.Cloak
+G2L["21"] = Instance.new("TextButton", G2L["20"]);
+G2L["21"]["TextWrapped"] = true;
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["TextSize"] = 14;
+G2L["21"]["TextScaled"] = true;
+G2L["21"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["21"]["BackgroundTransparency"] = 0.5;
+G2L["21"]["Size"] = UDim2.new(0, 165, 0, 50);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["Text"] = [[GUI Cloak: Enabled]];
+G2L["21"]["Name"] = [[Cloak]];
+
+
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.Settings.Cloak.UICorner
+G2L["22"] = Instance.new("UICorner", G2L["21"]);
+
+
+
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.Settings.UIGridLayout
+G2L["23"] = Instance.new("UIGridLayout", G2L["20"]);
+G2L["23"]["CellSize"] = UDim2.new(0, 165, 0, 50);
+G2L["23"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.Settings.ChangeTheme
+G2L["24"] = Instance.new("TextButton", G2L["20"]);
+G2L["24"]["TextWrapped"] = true;
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["TextSize"] = 14;
+G2L["24"]["TextScaled"] = true;
+G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24"]["BackgroundTransparency"] = 0.5;
+G2L["24"]["Size"] = UDim2.new(0, 165, 0, 50);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Text"] = [[Change Theme Current: Dragon Fruit]];
+G2L["24"]["Name"] = [[ChangeTheme]];
+
+
+-- StarterGui.UltimateHackingGUI.MainFrame.Sections.Settings.ChangeTheme.UICorner
+G2L["25"] = Instance.new("UICorner", G2L["24"]);
+
+
+
+-- StarterGui.UltimateHackingGUI.MainFrame.Space
+G2L["26"] = Instance.new("UIGradient", G2L["4"]);
+G2L["26"]["Enabled"] = false;
+G2L["26"]["Rotation"] = 45;
+G2L["26"]["Name"] = [[Space]];
+G2L["26"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(76, 0, 67)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+
+-- StarterGui.UltimateHackingGUI.MainFrame.BubbleGum
+G2L["27"] = Instance.new("UIGradient", G2L["4"]);
+G2L["27"]["Enabled"] = false;
+G2L["27"]["Rotation"] = 45;
+G2L["27"]["Name"] = [[BubbleGum]];
+G2L["27"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(254, 0, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(255, 147, 243))};
+
+
+-- StarterGui.UltimateHackingGUI.Open
+G2L["28"] = Instance.new("TextButton", G2L["1"]);
+G2L["28"]["TextWrapped"] = true;
+G2L["28"]["BorderSizePixel"] = 0;
+G2L["28"]["TextSize"] = 14;
+G2L["28"]["TextScaled"] = true;
+G2L["28"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["28"]["Size"] = UDim2.new(0, 50, 0, 50);
+G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["28"]["Text"] = [[UHG]];
+G2L["28"]["Name"] = [[Open]];
+G2L["28"]["Position"] = UDim2.new(0, 0, 0.92877, 0);
 
 
 -- StarterGui.UltimateHackingGUI.Setup/SettingConfig
@@ -323,8 +422,10 @@ local script = G2L["2"];
 	CloakSetting.Changed:Connect(function()
 		if CloakSetting.Value == true then
 			script.Parent.Name = math.random(1, math.huge)
+			script.Parent.MainFrame.Sections.Settings.Cloak.Text = "GUI Cloak: Enabled"
 		else
 			script.Parent.Name = "UltimateHackingGUI"
+			script.Parent.MainFrame.Sections.Settings.Cloak.Text = "GUI Cloak: Disabled"
 		end
 	end)
 	
@@ -338,6 +439,7 @@ local script = G2L["2"];
 		end
 		
 		script.Parent.MainFrame:FindFirstChild(ThemeSetting.Value).Enabled = true
+		script.Parent.MainFrame.Sections.Settings.ChangeTheme.Text = "Change Theme: "..ThemeSetting.Value
 	end)
 end;
 task.spawn(C_2);
@@ -445,6 +547,24 @@ local script = G2L["3"];
 	
 	MainFrame.Sections.CharManipulator.ExecuteChanges.MouseButton1Click:Connect(function()
 		ManipulateCharacter()
+	end)
+	
+	MainFrame.Sections.Settings.Cloak.MouseButton1Click:Connect(function()
+		if game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("CloakSetting").Value == true then
+			game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("CloakSetting").Value = false
+		else
+			game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("CloakSetting").Value = true
+		end
+	end)
+	
+	MainFrame.Sections.Settings.ChangeTheme.MouseButton1Click:Connect(function()
+		if game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("ThemeSetting").Value == "DragonFruit" then
+			game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("ThemeSetting").Value = "Space"
+		elseif game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("ThemeSetting").Value == "Space" then
+			game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("ThemeSetting").Value = "BubbleGum"
+		elseif game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("ThemeSetting").Value == "BubbleGum" then
+			game.ReplicatedStorage:FindFirstChild("GUISettingsStorage"):FindFirstChild("ThemeSetting").Value = "DragonFruit"
+		end
 	end)
 	
 	OpenUIAnim()
